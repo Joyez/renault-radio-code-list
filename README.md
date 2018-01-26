@@ -26010,7 +26010,9 @@ precode presente en la etiqueta del mismo.
 | Z999 | 0060 |
 
 Los códigos que faltaban en el listado de [Joyez][1] fueron obtenidos en
-[Physmo][2]. Los algorítmos son desconocidos.
+[Physmo][2]. Los algorítmos son desconocidos para mi, pero el cálculo está en
+[esta planilla][3].
 
  [1]: https://github.com/Joyez/renault-radio-code-list
  [2]: http://www.physmo.com/renault/
+ [3]: https://docs.google.com/spreadsheets/d/1Po1bfLIH7DpBhfW-KVq8VnKbo_Dywxu52FW9FFUFrXw/edit?usp=sharing
