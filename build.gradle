@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+group 'com'
+version '1.0'
+
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+javafx {
+    modules = ['javafx.controls','javafx.fxml']
+    version = '12'
+}
+mainClassName = 'com.Main'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.Launcher'
+    }
+    baseName = project.name
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
