@@ -33,7 +33,7 @@ public class ReadSave  {
 
         } catch (FileNotFoundException e) {
             saveCodes(readCodesTxt());
-            readCodes();
+            return readCodes();
         } catch (ClassNotFoundException|IOException e) {
             e.printStackTrace();
         }

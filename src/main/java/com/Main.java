@@ -27,7 +27,8 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        
+        ReadSave.readCodes().forEach((a,b)-> System.out.println(a.toString()+"  "+b.toString()));
 
     }
 
