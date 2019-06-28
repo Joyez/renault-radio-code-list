@@ -15,6 +15,9 @@ public class Code implements Comparable, Serializable {
         return stringCompare(this.numberCode,code.numberCode);
     }
 
+    public String getNumberCode() {
+        return numberCode;
+    }
 
     private int stringCompare(String str1, String str2)
     {

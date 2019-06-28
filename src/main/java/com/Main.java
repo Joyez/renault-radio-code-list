@@ -1,6 +1,5 @@
 package com;
 
-import com.loaders.ReadSave;
 import com.utilies.Paths;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -23,12 +22,12 @@ public class Main extends Application {
         try {
             root = FXMLLoader.load(getClass().getResource(Paths.PATH_MAIN_WINDOW));
             primaryStage.setScene(new Scene(root));
+            primaryStage.setResizable(false);
+            primaryStage.setTitle("Radio code generator");
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
-        ReadSave.readCodes().forEach((a,b)-> System.out.println(a.toString()+"  "+b.toString()));
 
     }
 
