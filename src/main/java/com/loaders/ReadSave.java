@@ -42,8 +42,8 @@ public class ReadSave  {
 
     private static Map readCodesTxt()
     {
-
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("temp.txt"))) {
+        ReadSave readSave = new ReadSave();
+        try(BufferedReader bufferedReader = new BufferedReader(readSave.getFileFromResources())) {
             String text = bufferedReader.readLine();
             Map<Code,Code> mapCode = new TreeMap<>();
             while(text !=null){
@@ -59,5 +59,12 @@ public class ReadSave  {
         }
 
         return null;
+    }
+
+
+    private InputStreamReader getFileFromResources() {
+
+        InputStream classLoader = getClass().getResourceAsStream("/files/temp.txt");
+        return new InputStreamReader(classLoader);
     }
 }

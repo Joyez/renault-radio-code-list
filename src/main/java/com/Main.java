@@ -26,7 +26,7 @@ public class Main extends Application {
             primaryStage.setTitle("Radio code generator");
             primaryStage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
 
     }
